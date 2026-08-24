@@ -8,51 +8,30 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: "Segoe UI", system-ui, Roboto, Helvetica, Arial, sans-serif;
-      background: #eef3f1;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 24px;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 30px;
+      background: #eef3f1; display: flex; flex-wrap: wrap; gap: 24px;
+      justify-content: center; align-items: center; min-height: 100vh; padding: 30px;
     }
-
-    /* ===== Carte ===== */
     .card {
-      width: 340px;
-      height: 200px;
+      width: 340px; height: 200px;
       background: linear-gradient(135deg, #0b3d2e, #157a4f);
-      border-radius: 16px;
-      color: #fff;
-      padding: 18px 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      border-radius: 16px; color: #fff; padding: 18px 20px;
+      display: flex; flex-direction: column; justify-content: space-between;
       box-shadow: 0 14px 34px rgba(11,61,46,0.30);
-      position: relative;
-      overflow: hidden;
+      position: relative; overflow: hidden;
     }
     .card::after {
-      content: "";
-      position: absolute;
-      right: -60px; top: -60px;
+      content: ""; position: absolute; right: -60px; top: -60px;
       width: 160px; height: 160px;
       background: radial-gradient(circle, rgba(127,227,176,0.35), transparent 70%);
     }
-
     .card-top { display: flex; align-items: center; gap: 10px; position: relative; z-index: 2; }
     .card-top img.logo { width: 38px; height: 38px; }
     .card-name { font-size: 1.45rem; font-weight: 700; letter-spacing: .3px; }
     .card-name span { color: #7fe3b0; }
-
     .card-tag { font-size: .82rem; opacity: .9; position: relative; z-index: 2; margin-top: 2px; }
-
     .card-info { position: relative; z-index: 2; font-size: .92rem; line-height: 1.5; }
     .card-info a { color: #eafaf1; text-decoration: none; }
     .card-info .row { display: flex; gap: 8px; align-items: center; }
-
-    /* ===== Carte avec QR ===== */
     .card.qr { width: 340px; height: 200px; background: #fff; color: #0b3d2e; display: flex; }
     .card.qr .qr-left { flex: 1; padding: 18px 20px; display: flex; flex-direction: column; justify-content: center; gap: 8px; }
     .card.qr .qr-left .card-name { color: #0b3d2e; }
@@ -63,15 +42,9 @@
       display: flex; align-items: center; justify-content: center;
     }
     .card.qr .qr-right img { width: 104px; height: 104px; background: #fff; border-radius: 8px; padding: 4px; }
-
-    /* ===== Bouton imprimer ===== */
     .toolbar { width: 100%; text-align: center; margin-bottom: 6px; }
-    .btn-print {
-      background: #157a4f; color: #fff; border: none; padding: 11px 22px;
-      border-radius: 999px; font-size: .95rem; font-weight: 600; cursor: pointer;
-    }
+    .btn-print { background: #157a4f; color: #fff; border: none; padding: 11px 22px; border-radius: 999px; font-size: .95rem; font-weight: 600; cursor: pointer; }
     .btn-print:hover { background: #0b3d2e; }
-
     @media print {
       body { background: #fff; gap: 0; padding: 0; }
       .toolbar { display: none; }
@@ -80,28 +53,23 @@
   </style>
 </head>
 <body>
-
   <div class="toolbar">
-    <button class="btn-print" onclick="window.print()">🖨️ Imprimer la carte</button>
+    <button class="btn-print" onclick="window.print()">Imprimer la carte</button>
   </div>
-
-  <!-- Verso : infos -->
   <div class="card">
     <div>
       <div class="card-top">
-        <img class="logo" src="logo.svg" alt="Logo Laya VTC" />
+        <img class="logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJMb2dvIExheWEgVlRDIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iY2FyIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzFmYWU2YiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxNTdhNGYiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDwhLS0gQ2VyY2xlIGRlIGZvbmQgLS0+CiAgPGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iMzAiIGZpbGw9IiNlYWZhZjEiLz4KICA8IS0tIENhcnJvc3NlcmllIC0tPgogIDxwYXRoIGQ9Ik0xMiA0MCBjMC0xIDEtMiAyLTIgaDQgbDMtNyBjMS0yIDMtMyA1LTMgaDEyIGMyIDAgNCAxIDUgMyBsMyA3IGg0IGMxIDAgMiAxIDIgMiB2NCBjMCAxLTEgMi0yIDIgaC0yIGMtMSAyLTMgMy01IDMgLTIgMC00LTEtNS0zIGgtMTQgYy0xIDItMyAzLTUgMyAtMiAwLTQtMS01LTMgaC0yIGMtMSAwLTItMS0yLTIgeiIgZmlsbD0idXJsKCNjYXIpIi8+CiAgPCEtLSBWaXRyZXMgLS0+CiAgPHBhdGggZD0iTTI0IDMxIGgxMiBjMSAwIDIgMCAzIDEgbDIgNCBoLTE5IHoiIGZpbGw9IiNlYWZhZjEiLz4KICA8IS0tIFJvdWVzIC0tPgogIDxjaXJjbGUgY3g9IjIyIiBjeT0iNDYiIHI9IjQiIGZpbGw9IiMwYjNkMmUiLz4KICA8Y2lyY2xlIGN4PSI0MiIgY3k9IjQ2IiByPSI0IiBmaWxsPSIjMGIzZDJlIi8+CiAgPGNpcmNsZSBjeD0iMjIiIGN5PSI0NiIgcj0iMS42IiBmaWxsPSIjN2ZlM2IwIi8+CiAgPGNpcmNsZSBjeD0iNDIiIGN5PSI0NiIgcj0iMS42IiBmaWxsPSIjN2ZlM2IwIi8+CiAgPCEtLSBGZXVpbGxlIMOpY28gLS0+CiAgPHBhdGggZD0iTTQ2IDE2IGM0IDEgNyA0IDcgOSAwLTUtMy05LTctOSAtMSAwLTIgMC0zIDEgMi0yIDQtMiAzLTF6IiBmaWxsPSIjMWZhZTZiIi8+CiAgPHBhdGggZD0iTTQ1IDE3IGM1IDIgOCA2IDggMTEgLTUgMC05LTMtMTEtOCAxIDUgNCA4IDkgOCAtNi0xLTEwLTUtMTAtMTEgMC0xIDEtMSA0IDB6IiBmaWxsPSIjMTU3YTRmIi8+Cjwvc3ZnPgo=" alt="Logo Laya VTC" />
         <div class="card-name">Laya<span>VTC</span></div>
       </div>
       <div class="card-tag">Chauffeur VTC — Île-de-France</div>
     </div>
     <div class="card-info">
-      <div class="row">📞 <a href="tel:+33761081895">+33 7 61 08 18 95</a></div>
-      <div class="row">✉️ <a href="mailto:lazeregg98@gmail.com">lazeregg98@gmail.com</a></div>
-      <div class="row">🌐 <a href="https://Laya-vtc.github.io/laya-vtc">Laya-vtc.github.io/laya-vtc</a></div>
+      <div class="row">Tel : <a href="tel:+33761081895">+33 7 61 08 18 95</a></div>
+      <div class="row">Mail : <a href="mailto:lazeregg98@gmail.com">lazeregg98@gmail.com</a></div>
+      <div class="row">Web : <a href="https://Laya-vtc.github.io/laya-vtc">Laya-vtc.github.io/laya-vtc</a></div>
     </div>
   </div>
-
-  <!-- Recto : QR code -->
   <div class="card qr">
     <div class="qr-left">
       <div class="card-name">Laya<span>VTC</span></div>
@@ -109,9 +77,8 @@
       <div class="scan">Tarifs sur devis · 24h/24 · 7j/7</div>
     </div>
     <div class="qr-right">
-      <img src="qrcode.png" alt="QR code vers le site Laya VTC" />
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAGQAQMAAAC6caSPAAAABlBMVEX///8LPS7vqXnuAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACI0lEQVR4nO3bS47CMAwGYCMWLHuEHoWjtUfLUTjCLFmgeho/EhcQEhKdMdLvxaiT5uvKjVwnEL0fE/eYiQYuduO4DhTS8WOYtICA7E9unqCj3iqH9c9Fh87MVx3/aWkMApKVDDWn5Rb5Nen4mvyNnFkeBQLyBcSS/+qZHpMfBOSfiExb6MQSNo1BQL6DWHiSL3JtobdeFiQgICkI93Byqkm+rS56gICkJM+iLuOzXvbi5HWAgHySeCZf2zpsmazVxWNWg4CkJHTUaS2rS0vygXsIlzkLCEhaIg1h3jaHtTbWZVyri/YsEJC9SY0zy7TJ0lY6vfWi1JveoAjNChCQxGQNqSIOdwnfpsljCQQkJZGWmpCLLt3eHL716mIOy7h34UBAcpHNtBqFyJrDVhuPbX/Z3xcQkL0J6Tps/w7aiODN8bOJfc/C12cQkIRkDf3i0+qCvKXGIeEHPUh5IQIBSUl8H9mawDEeqguZs4CAJCWDd+FYSOvCybRQkAghAgH5GyJh67A1IvRa95RZP/Gcg4BkJSWegtgcAyb7+quhfAEByUg2YXvKIeG5Hw82CAKyP5m4x9yOOow6UCzDw+l0IhCQlCSeTqewPtuJCHmUJr/MCl98ICC5SPztWz+dHrY5LLwCAQH5BtJjc/TXXwR+kvwgILuT0FIrxPcxP8tkEJAMxGJsP1izllrbO777+gMByUhiYgdCtrUhoS+CBwhIQvJ+/AI9Ydees1rhLAAAAABJRU5ErkJggg==" alt="QR code vers le site Laya VTC" />
     </div>
   </div>
-
 </body>
 </html>
