@@ -12,7 +12,7 @@ Site one-page, responsive, en HTML/CSS/JS pur (aucune dépendance, aucun build).
 - **Téléphone** : +33 7 61 08 18 95
 - **Email de réception** : lazeregg98@gmail.com (reçoit les réservations)
 - **Zone** : Île-de-France
-- **Tarif** : 2 € / km (+ 15 € prise en charge)
+- **Tarif** : sur devis (devis gratuit et personnalisé)
 
 ## Fonctionnement du formulaire
 Par défaut, le formulaire ouvre un email pré-rempli vers `lazeregg98@gmail.com`
