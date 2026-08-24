@@ -79,7 +79,7 @@ img { max-width: 100%; display: block; }
   height: 70px;
 }
 .logo { display: flex; align-items: center; gap: 8px; text-decoration: none; color: var(--ink); font-weight: 700; font-size: 1.25rem; }
-.logo-mark { font-size: 1.4rem; }
+.logo-mark { width: 34px; height: 34px; display: block; }
 .logo-accent { color: var(--green-500); }
 .nav-links { display: flex; align-items: center; gap: 26px; }
 .nav-links a { color: var(--ink); text-decoration: none; font-weight: 500; }
