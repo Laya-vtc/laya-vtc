@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carte de visite — Laya VTC</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Segoe UI", system-ui, Roboto, Helvetica, Arial, sans-serif;
+      background: #eef3f1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 30px;
+    }
+
+    /* ===== Carte ===== */
+    .card {
+      width: 340px;
+      height: 200px;
+      background: linear-gradient(135deg, #0b3d2e, #157a4f);
+      border-radius: 16px;
+      color: #fff;
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 14px 34px rgba(11,61,46,0.30);
+      position: relative;
+      overflow: hidden;
+    }
+    .card::after {
+      content: "";
+      position: absolute;
+      right: -60px; top: -60px;
+      width: 160px; height: 160px;
+      background: radial-gradient(circle, rgba(127,227,176,0.35), transparent 70%);
+    }
+
+    .card-top { display: flex; align-items: center; gap: 10px; position: relative; z-index: 2; }
+    .card-top img.logo { width: 38px; height: 38px; }
+    .card-name { font-size: 1.45rem; font-weight: 700; letter-spacing: .3px; }
+    .card-name span { color: #7fe3b0; }
+
+    .card-tag { font-size: .82rem; opacity: .9; position: relative; z-index: 2; margin-top: 2px; }
+
+    .card-info { position: relative; z-index: 2; font-size: .92rem; line-height: 1.5; }
+    .card-info a { color: #eafaf1; text-decoration: none; }
+    .card-info .row { display: flex; gap: 8px; align-items: center; }
+
+    /* ===== Carte avec QR ===== */
+    .card.qr { width: 340px; height: 200px; background: #fff; color: #0b3d2e; display: flex; }
+    .card.qr .qr-left { flex: 1; padding: 18px 20px; display: flex; flex-direction: column; justify-content: center; gap: 8px; }
+    .card.qr .qr-left .card-name { color: #0b3d2e; }
+    .card.qr .qr-left .card-name span { color: #1fae6b; }
+    .card.qr .qr-left .scan { font-size: .78rem; color: #5b6b63; }
+    .card.qr .qr-right {
+      width: 130px; background: linear-gradient(135deg, #0b3d2e, #157a4f);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .card.qr .qr-right img { width: 104px; height: 104px; background: #fff; border-radius: 8px; padding: 4px; }
+
+    /* ===== Bouton imprimer ===== */
+    .toolbar { width: 100%; text-align: center; margin-bottom: 6px; }
+    .btn-print {
+      background: #157a4f; color: #fff; border: none; padding: 11px 22px;
+      border-radius: 999px; font-size: .95rem; font-weight: 600; cursor: pointer;
+    }
+    .btn-print:hover { background: #0b3d2e; }
+
+    @media print {
+      body { background: #fff; gap: 0; padding: 0; }
+      .toolbar { display: none; }
+      .card, .card.qr { box-shadow: none; margin: 0; page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <button class="btn-print" onclick="window.print()">🖨️ Imprimer la carte</button>
+  </div>
+
+  <!-- Verso : infos -->
+  <div class="card">
+    <div>
+      <div class="card-top">
+        <img class="logo" src="logo.svg" alt="Logo Laya VTC" />
+        <div class="card-name">Laya<span>VTC</span></div>
+      </div>
+      <div class="card-tag">Chauffeur VTC — Île-de-France</div>
+    </div>
+    <div class="card-info">
+      <div class="row">📞 <a href="tel:+33761081895">+33 7 61 08 18 95</a></div>
+      <div class="row">✉️ <a href="mailto:lazeregg98@gmail.com">lazeregg98@gmail.com</a></div>
+      <div class="row">🌐 <a href="https://Laya-vtc.github.io/laya-vtc">Laya-vtc.github.io/laya-vtc</a></div>
+    </div>
+  </div>
+
+  <!-- Recto : QR code -->
+  <div class="card qr">
+    <div class="qr-left">
+      <div class="card-name">Laya<span>VTC</span></div>
+      <div class="card-tag">Scannez pour réserver</div>
+      <div class="scan">Tarifs sur devis · 24h/24 · 7j/7</div>
+    </div>
+    <div class="qr-right">
+      <img src="qrcode.png" alt="QR code vers le site Laya VTC" />
+    </div>
+  </div>
+
+</body>
+</html>
