@@ -91,11 +91,18 @@ img { max-width: 100%; display: block; }
 
 /* ===== Hero ===== */
 .hero {
-  background: linear-gradient(135deg, var(--green-900), var(--green-700));
+  background: url("hero-bg.svg") center/cover no-repeat, linear-gradient(135deg, var(--green-900), var(--green-700));
   color: var(--white);
   padding: 80px 0 90px;
   position: relative;
   overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(11,61,46,0.82), rgba(21,122,79,0.70));
+  z-index: 1;
 }
 .hero::after {
   content: "";
@@ -103,12 +110,15 @@ img { max-width: 100%; display: block; }
   right: -120px; top: -120px;
   width: 360px; height: 360px;
   background: radial-gradient(circle, rgba(127,227,176,0.35), transparent 70%);
+  z-index: 1;
 }
 .hero-inner {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 40px;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 .badge {
   display: inline-block;

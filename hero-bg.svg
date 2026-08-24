@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Voiture avec chauffeur sur route">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dff3e8"/>
+      <stop offset="1" stop-color="#bfe6d2"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1fae6b"/>
+      <stop offset="1" stop-color="#0b3d2e"/>
+    </linearGradient>
+    <linearGradient id="road" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8aa79a"/>
+      <stop offset="1" stop-color="#5f7d70"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ciel -->
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <!-- Soleil -->
+  <circle cx="1320" cy="180" r="90" fill="#ffffff" opacity="0.55"/>
+  <!-- Collines -->
+  <path d="M0 560 Q 300 470 620 540 T 1240 520 T 1600 560 V900 H0 Z" fill="#9fd9b8" opacity="0.7"/>
+  <path d="M0 620 Q 400 560 800 610 T 1600 600 V900 H0 Z" fill="#7fc9a1" opacity="0.7"/>
+  <!-- Route -->
+  <path d="M0 700 L1600 660 V900 H0 Z" fill="url(#road)"/>
+  <path d="M0 760 L1600 720" stroke="#ffffff" stroke-width="8" stroke-dasharray="60 50" opacity="0.6"/>
+
+  <!-- Véhicule + chauffeur (vue de profil) -->
+  <g transform="translate(560 470)">
+    <!-- ombre -->
+    <ellipse cx="270" cy="250" rx="320" ry="26" fill="#0b3d2e" opacity="0.18"/>
+    <!-- carrosserie -->
+    <path d="M20 170 C20 120 60 95 120 92 L210 88 C250 60 320 55 380 80 L470 100 C520 108 540 130 540 175 L540 210 C540 230 525 245 505 245 L40 245 C22 245 12 230 12 210 Z" fill="url(#body)"/>
+    <!-- vitre avant + chauffeur -->
+    <path d="M250 96 C290 72 340 70 380 88 L450 104 L450 160 L255 160 Z" fill="#eafaf1" opacity="0.92"/>
+    <!-- tête du chauffeur -->
+    <circle cx="330" cy="118" r="20" fill="#2b3a33"/>
+    <!-- torse -->
+    <path d="M300 160 C300 132 360 132 360 160 L360 175 L300 175 Z" fill="#2b3a33" opacity="0.85"/>
+    <!-- vitre arrière -->
+    <path d="M70 110 L210 105 L210 160 L70 160 Z" fill="#eafaf1" opacity="0.92"/>
+    <!-- poignée -->
+    <rect x="230" y="150" width="34" height="7" rx="3" fill="#0b3d2e"/>
+    <!-- roues -->
+    <circle cx="150" cy="245" r="46" fill="#0b3d2e"/>
+    <circle cx="150" cy="245" r="22" fill="#7fe3b0"/>
+    <circle cx="420" cy="245" r="46" fill="#0b3d2e"/>
+    <circle cx="420" cy="245" r="22" fill="#7fe3b0"/>
+    <!-- phare -->
+    <circle cx="528" cy="180" r="9" fill="#fff3b0"/>
+  </g>
+
+  <!-- Arbres éco -->
+  <g fill="#157a4f" opacity="0.85">
+    <path d="M120 660 q-30 -70 0 -120 q30 50 0 120 Z"/>
+    <path d="M1500 650 q-26 -60 0 -105 q26 45 0 105 Z"/>
+  </g>
+</svg>
