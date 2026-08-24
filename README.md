@@ -3,7 +3,7 @@
 Site one-page, responsive, en HTML/CSS/JS pur (aucune dépendance, aucun build).
 
 ## Contenu
-- `index.html` — page unique (FR) : accueil, services, flotte électrique, tarifs (2 €/km), comment ça marche, engagement écologique, témoignages, formulaire de réservation, footer
+- `index.html` — page unique (FR) : accueil, services, flotte essence hybride, tarifs sur devis, comment ça marche, engagement écologique, formulaire de réservation, footer
 - `styles.css` — thème vert éco, responsive (mobile/tablette/desktop)
 - `script.js` — menu mobile, année auto, formulaire de réservation
 
