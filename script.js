@@ -25,8 +25,8 @@ navLinks.querySelectorAll("a").forEach((a) =>
 const FORMSPREE_ENDPOINT = ""; // laisse vide pour le mode mailto
 const RESERVATION_EMAIL = "lazeregg98@gmail.com";
 const VEHICULE_LABELS = {
-  berline: "Berline électrique",
-  van: "Van électrique",
+  berline: "Berline",
+  van: "Van",
   premium: "Berline premium"
 };
 
