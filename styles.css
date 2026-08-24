@@ -156,7 +156,7 @@ img { max-width: 100%; display: block; }
 .grid-3 { grid-template-columns: repeat(3, 1fr); }
 .grid-4 { grid-template-columns: repeat(4, 1fr); }
 
-.card, .fleet-card, .eco-card, .quote {
+.card, .fleet-card, .eco-card {
   background: var(--white);
   border-radius: var(--radius);
   padding: 26px;
